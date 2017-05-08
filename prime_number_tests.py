@@ -21,3 +21,13 @@ class OutPutTests(TestCase):
 
     def test_number_included_if_prime(self):
         self.assertEqual(collect_prime_numbers(5), [2, 3, 5])
+
+    def test_input_is_not_string(self):
+        self.assertEqual(collect_prime_numbers(''), 'Only integers allowed')
+
+    def test_input_is_not_dictionary(self):
+        self.assertEqual(({}), 'Only integers allowed')
+
+    def test_input_is_not_tuple(self):
+        self.assertEqual((1,), 'Only integers allowed')
+
