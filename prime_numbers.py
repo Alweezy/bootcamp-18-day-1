@@ -6,3 +6,12 @@ def is_prime(number):
             return False
         return True
 
+
+def collect_prime_numbers(number):
+    prime_numbers = []
+    if number >= 2:
+        prime_numbers.append(2)
+    for i in range(3, number + 1):
+        if is_prime(i):
+            prime_numbers.append(i)
+    return prime_numbers
