@@ -26,8 +26,8 @@ class OutPutTests(TestCase):
         self.assertEqual(collect_prime_numbers(''), 'Only integers allowed')
 
     def test_input_is_not_dictionary(self):
-        self.assertEqual(({}), 'Only integers allowed')
+        self.assertEqual(collect_prime_numbers({}), 'Only integers allowed')
 
     def test_input_is_not_tuple(self):
-        self.assertEqual((1,), 'Only integers allowed')
+        self.assertEqual(collect_prime_numbers((1,)), 'Only integers allowed')
 
